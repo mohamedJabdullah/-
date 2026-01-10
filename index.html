@@ -1,326 +1,267 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>موقعي الشخصي - الورشة الفنية</title>
-  <style>
-    body {
-      font-family: 'Tahoma', sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #333;
-      background-image: url('WhatsApp Image 2025-07-04 at 20.52.19_e68ee4ac.jpg');
-      background-size: 80;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      padding-top: 80px;
-      padding-bottom: 80px;
-      position: relative;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Milton Club | بيع مباشر</title>
 
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(255, 255, 255, 0.8);
-      z-index: -1;
-    }
-
-    header {
-      background-color: #00bcd4;
-      color: white;
-      padding: 20px;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 999;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .site-name {
-      font-weight: bold;
-      font-size: 20px;
-    }
-
-    .language-switch {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      background-color: white;
-      color: #007bff;
-      border: none;
-      padding: 6px 12px;
-      cursor: pointer;
-      border-radius: 4px;
-      z-index: 1001;
-      direction: ltr;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      background-color: #00acc1;
-      flex-wrap: wrap;
-    }
-
-    nav ul li {
-      padding: 15px 20px;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      padding: 30px;
-      text-align: center;
-    }
-
-    .message-box {
-      background-color: white;
-      margin: 30px auto;
-      padding: 25px;
-      max-width: 750px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      display: none;
-      transition: all 0.4s ease-in-out;
-      text-align: aligninherit;
-    }
-
-    .message-box p {
-      font-size: 18px;
-      line-height: 2;
-      margin: 0 0 15px;
-    }
-
-    .service-list {
-      text-align: right;
-      margin-top: 15px;
-    }
-
-    .service-list li {
-      margin-bottom: 10px;
-      font-size: 17px;
-    }
-
-    footer {
-      background-color: #222;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      z-index: 999;
-    }
-
-    .whatsapp-float {
-      position: fixed;
-      bottom: 100px;
-      right: 20px;
-      z-index: 1000;
-      cursor: pointer;
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .whatsapp-float:hover {
-      transform: scale(1.1);
-    }
-
-    .hidden {
-      display: none;
-    }
-    
- .ar-link, .en-link {
-  color: #007bff;
-  text-decoration: none;
-}
-.ar-link:hover, .en-link:hover {
-  text-decoration: underline;
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Tahoma;
+  background:#f4f4f4;
 }
 
+header{
+  background:#007bff;
+  color:white;
+  padding:20px;
+  text-align:center;
+}
 
-  </style>
+.filters{
+  text-align:center;
+  padding:15px;
+  background:#e9ecef;
+}
+
+.filters button{
+  margin:5px;
+  padding:10px 15px;
+  border:none;
+  background:#0056b3;
+  color:white;
+  border-radius:6px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.products{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+  padding:20px;
+}
+
+.product{
+  background:white;
+  width:250px;
+  padding:15px;
+  border-radius:12px;
+  box-shadow:0 0 10px rgba(0,0,0,.1);
+  text-align:center;
+}
+
+.product img{
+  width:100%;
+  border-radius:8px;
+}
+
+.product h3{
+  margin:10px 0;
+}
+
+.product p{
+  margin:5px 0;
+  font-weight:bold;
+}
+
+select{
+  width:100%;
+  padding:8px;
+  margin-top:6px;
+}
+
+.order-btn{
+  margin-top:10px;
+  width:100%;
+  padding:10px;
+  background:#25D366;
+  color:white;
+  border:none;
+  border-radius:6px;
+  font-size:15px;
+  cursor:pointer;
+}
+
+footer{
+  background:#222;
+  color:white;
+  text-align:center;
+  padding:15px;
+}
+
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  left:20px;
+  background:#25D366;
+  color:white;
+  padding:12px 18px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+}
+</style>
 </head>
+
 <body>
 
-  <button class="language-switch" onclick="toggleLanguage()">English</button>
+<header>
+  <h2>Milton Club</h2>
+  <p>ملابس ميلتون – طلب مباشر عبر واتساب</p>
+</header>
 
-  <header>
-    <div class="site-name" id="siteName">الورشة الفنية</div>
-  </header>
-
-  <nav>
-    <ul>
-      <li><a onclick="toggleAbout()"><span class="ar">من نحن</span><span class="en hidden">About Us</span></a></li>
-      <li><a onclick="toggleServices()"><span class="ar">الخدمات</span><span class="en hidden">Services</span></a></li>
-      <li><a href="gallery.html"><span class="ar">معرض الصور</span><span class="en hidden">Gallery</span></a></li>
-      <li><a onclick="toggleContact()"><span class="ar">تواصل معنا</span><span class="en hidden">Contact</span></a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <p class="ar">مرحباً بك في موقعي الشخصي!</p>
-    <p class="en hidden">Welcome to my personal website!</p>
-
-   <div id="about-message" class="message-box">
-  <p class="ar">✨ <strong>نحن الورشة الفنية لتشغيل وتجهيز مصانع الخلاطات :-</strong></p>
-  <p class="ar">نحن الورشة الفنية، إحدى الجهات الرائدة في تشغيل وتجهيز مصانع خلاطات المياه عالية الجودة، بخبرة تمتد لأكثر من 25 عامًا في السوق المصري.</p>
-  <p class="ar">نلتزم بتقديم حلول متكاملة في مجال الخلاطات وتجهيزاتها، تجمع بين الجودة الفائقة، والمتانة، والتصميم العصري، لتناسب مختلف الأذواق والاحتياجات.</p>
-  <p class="ar">نفتخر بخدمة طيف واسع من العملاء، من الورش الصغيرة إلى كبرى المصانع، مع ضمان أعلى مستويات الكفاءة والاحترافية في كل مرحلة من مراحل العمل.</p>
-  <p class="ar">نؤمن أن رضاكم هو أساس نجاحنا، لذا نحرص على تقديم تجربة متميزة تشمل الدعم الكامل قبل الشراء وبعده.</p>
-  <p class="ar">💡 <strong>رسالتنا :-</strong></p>
-  <p class="ar">تقديم خدمات متكاملة وفعالة لورش ومصانع الخلاطات، تقوم على الابتكار، والدقة، والالتزام، مع بناء علاقات طويلة الأمد مع عملائنا تقوم على الثقة والنجاح المشترك.</p>
-
-  <p class="en hidden">✨ <strong>We are the Technical Workshop for Operating and Equipping Mixer Factories:</strong></p>
-  <p class="en hidden">We are a leading entity in operating and equipping high-quality water mixer factories, with over 25 years of experience in the Egyptian market.</p>
-  <p class="en hidden">We are committed to providing integrated solutions that combine superior quality, durability, and modern design to meet all tastes and needs.</p>
-  <p class="en hidden">We proudly serve a wide range of clients, from small workshops to major factories, ensuring top levels of efficiency and professionalism at every stage.</p>
-  <p class="en hidden">We believe that your satisfaction is the key to our success, so we are keen to offer a distinguished experience with full support before and after purchase.</p>
-  <p class="en hidden">💡 <strong>Our Mission:</strong></p>
-  <p class="en hidden">To provide integrated and effective services to mixer workshops and factories, based on innovation, precision, and commitment — building long-term relationships with our clients based on trust and shared success.</p>
+<!-- التصنيفات -->
+<div class="filters">
+  <button onclick="filterProducts('all')">الكل</button>
+  <button onclick="filterProducts('tshirt')">تيشيرتات</button>
+  <button onclick="filterProducts('pants')">بناطيل</button>
+  <button onclick="filterProducts('set')">طقم كامل</button>
 </div>
 
+<!-- المنتجات -->
+<section class="products">
 
-   <div id="services-message" class="message-box">
-  <p class="ar">✨ <strong>نقدّم مجموعة متكاملة من الخدمات في مجال خلاطات المياه، تشمل:</strong></p>
-  <p class="ar">🔧 <strong>تجهيز المصانع والورش:</strong><br>نوفر التجهيزات الازمه لتشغيل المصانع المختصه بخلاطات المياه و توفير العدد و الاصطنبات و معدات الخرط و خطوط الانتاج </p>
-  <p class="ar">🛠️ <strong>التركيب والصيانة:</strong><br>فريق فني متخصص يقدم خدمات تركيب وصيانة احترافية، بسرعة ودقة تلبي توقعاتك.</p>
-  <p class="ar">🎨 <strong>استشارات التصميم:</strong><br>نساعدك في اختيار الأنسب من حيث المساحة، التصميم، والميزانية، مع توفير استشارات فنية دقيقة لضمان أفضل النتائج.</p>
+<!-- ===== تيشيرتات ===== -->
+<div class="product tshirt">
+  <img src="img/tshirt1.jpg">
+  <h3>تيشيرت ميلتون</h3>
+  <p>الكود: MC-TS-001</p>
 
-  <p class="en hidden">✨ <strong>We offer a comprehensive range of services in the field of water mixers, including:</strong></p>
-  <p class="en">🔧 <strong>Factory and Workshop Setup:</strong><br>We provide all the essential equipment required to operate factories specialized in water mixers, including tools, molds, turning machines, and production lines.</p>
-  <p class="en hidden">🛠️ <strong>Installation & Maintenance:</strong><br>A specialized technical team provides professional installation and maintenance services, with speed and precision that meet your expectations.</p>
-  <p class="en hidden">🎨 <strong>Design Consultations:</strong><br>We assist you in choosing the most suitable options based on space, design, and budget — with precise technical consultations for the best results.</p>
+  <select id="s1">
+    <option>M</option><option>L</option><option>XL</option><option>XXL</option>
+  </select>
+
+  <select id="c1">
+    <option>أسود</option><option>أبيض</option><option>كحلي</option>
+  </select>
+
+  <button class="order-btn"
+    onclick="order('MC-TS-001','تيشيرت ميلتون','s1','c1')">
+    اطلب الآن
+  </button>
 </div>
 
-    <div id="contact-message" class="message-box">
-  <!-- النسخة العربية -->
-  <div class="ar" style="text-align: center;">
-    <p><strong>📞 الهاتف:</strong> 01090604881</p>
-    <p><strong>📍 العنوان:</strong><br>
-      شارع التوحيد من شارع الأربعين، بشتيل<br>
-      <a href="https://maps.app.goo.gl/hQLtUgEUVPeu36nH8" target="_blank" style="color: #007bff;">اضغط هنا لعرض الموقع على الخريطة</a>
-    </p>
-    <p><strong>📱 وسائل التواصل:</strong></p>
-    <p>📸 إنستجرام:
-      <a href="https://www.instagram.com/mohamedahmed0591" target="_blank" style="color: #007bff;">
-        @mohamedahmed0591
-      </a>
-    </p>
-    <p>🔗 فيسبوك:
-      <a href="https://www.facebook.com/share/19UZUydG89/" target="_blank" style="color: #007bff;">
-        تابعنا على فيسبوك
-      </a>
-    </p>
-    <p>💬 واتساب:
-      <a href="https://wa.me/201090604881" target="_blank" style="color: #007bff;">
-        راسلنا على واتساب
-      </a>
-    </p>
-  </div>
+<div class="product tshirt">
+  <img src="img/tshirt2.jpg">
+  <h3>تيشيرت ميلتون</h3>
+  <p>الكود: MC-TS-002</p>
 
-  <!-- النسخة الإنجليزية -->
-  <div class="en hidden" style="text-align: center;">
-    <p><strong>📞 Phone:</strong> +20 109 060 4881</p>
-    <p><strong>📍 Address:</strong><br>
-      El-Tawheed Street, from El-Arbaeen Street, Bashtil<br>
-      <a href="https://maps.app.goo.gl/hQLtUgEUVPeu36nH8" target="_blank" style="color: #007bff;">
-        View location on the map
-      </a>
-    </p>
-    <p><strong>📱 Social Media:</strong></p>
-    <p>📸 Instagram:
-      <a href="https://www.instagram.com/mohamedahmed0591" target="_blank" style="color: #007bff;">
-        @mohamedahmed0591
-      </a>
-    </p>
-    <p>🔗 Facebook:
-      <a href="https://www.facebook.com/share/19UZUydG89/" target="_blank" style="color: #007bff;">
-        Follow us on Facebook
-      </a>
-    </p>
-    <p>💬 WhatsApp:
-      <a href="https://wa.me/201090604881" target="_blank" style="color: #007bff;">
-        Chat with us on WhatsApp
-      </a>
-    </p>
-  </div>
+  <select id="s2">
+    <option>M</option><option>L</option><option>XL</option>
+  </select>
+
+  <select id="c2">
+    <option>أسود</option><option>رمادي</option>
+  </select>
+
+  <button class="order-btn"
+    onclick="order('MC-TS-002','تيشيرت ميلتون','s2','c2')">
+    اطلب الآن
+  </button>
 </div>
 
+<!-- ===== بناطيل ===== -->
+<div class="product pants">
+  <img src="img/pants1.jpg">
+  <h3>بنطلون ميلتون</h3>
+  <p>الكود: MC-PN-010</p>
 
+  <select id="s3">
+    <option>M</option><option>L</option><option>XL</option>
+  </select>
 
+  <select id="c3">
+    <option>أسود</option><option>رمادي</option>
+  </select>
 
+  <button class="order-btn"
+    onclick="order('MC-PN-010','بنطلون ميلتون','s3','c3')">
+    اطلب الآن
+  </button>
+</div>
 
-  </main>
+<div class="product pants">
+  <img src="img/pants2.jpg">
+  <h3>بنطلون ميلتون</h3>
+  <p>الكود: MC-PN-011</p>
 
-  <footer>
-    <p class="ar">جميع الحقوق محفوظة © 2025</p>
-  </footer>
+  <select id="s4">
+    <option>M</option><option>L</option><option>XL</option>
+  </select>
 
-  <a href="https://wa.me/201090604881" class="whatsapp-float" target="_blank" title="راسلنا على واتساب">
-    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="واتساب" />
-  </a>
+  <select id="c4">
+    <option>أسود</option><option>كحلي</option>
+  </select>
 
-  <script>
-    let currentLang = 'ar';
+  <button class="order-btn"
+    onclick="order('MC-PN-011','بنطلون ميلتون','s4','c4')">
+    اطلب الآن
+  </button>
+</div>
 
-    function toggleLanguage() {
-      document.querySelectorAll('.ar').forEach(el => el.classList.toggle('hidden'));
-      document.querySelectorAll('.en').forEach(el => el.classList.toggle('hidden'));
+<!-- ===== أطقم ===== -->
+<div class="product set">
+  <img src="img/set1.jpg">
+  <h3>طقم ميلتون كامل</h3>
+  <p>الكود: MC-ST-100</p>
 
-      const html = document.documentElement;
-      const button = document.querySelector('.language-switch');
-      const title = document.getElementById('siteName');
+  <select id="s5">
+    <option>M</option><option>L</option><option>XL</option>
+  </select>
 
-      if (currentLang === 'ar') {
-        html.lang = 'en';
-        html.dir = 'ltr';
-        button.textContent = 'العربية';
-        title.textContent = 'Technical Workshop';
-        currentLang = 'en';
-      } else {
-        html.lang = 'ar';
-        html.dir = 'rtl';
-        button.textContent = 'English';
-        title.textContent = 'الورشة الفنية';
-        currentLang = 'ar';
-      }
+  <select id="c5">
+    <option>أسود</option><option>كحلي</option>
+  </select>
+
+  <button class="order-btn"
+    onclick="order('MC-ST-100','طقم ميلتون كامل','s5','c5')">
+    اطلب الآن
+  </button>
+</div>
+
+</section>
+
+<footer>
+  © 2025 Milton Club
+</footer>
+
+<a class="whatsapp" href="https://wa.me/201095983094" target="_blank">💬 واتساب</a>
+
+<script>
+function filterProducts(type){
+  document.querySelectorAll('.product').forEach(p=>{
+    if(type === 'all'){
+      p.style.display = 'block';
+    }else{
+      p.style.display = p.classList.contains(type) ? 'block' : 'none';
     }
+  });
+}
 
-    function toggleAbout() { showOnly('about-message'); }
-    function toggleServices() { showOnly('services-message'); }
-    function toggleContact() { showOnly('contact-message'); }
+function order(code, type, sizeId, colorId){
+  const size = document.getElementById(sizeId).value;
+  const color = document.getElementById(colorId).value;
 
-    function showOnly(idToShow) {
-      ['about-message', 'services-message', 'contact-message'].forEach(id => {
-        const el = document.getElementById(id);
-        el.style.display = (id === idToShow && el.style.display !== 'block') ? 'block' : 'none';
-      });
-      document.getElementById(idToShow)?.scrollIntoView({ behavior: 'smooth' });
-    }
+  const msg =
+`طلب جديد من Milton Club 👕
+--------------------
+الكود: ${code}
+النوع: ${type}
+المقاس: ${size}
+اللون: ${color}
 
-    window.onload = () => {
-      document.querySelectorAll('.ar').forEach(el => el.classList.remove('hidden'));
-      document.querySelectorAll('.en').forEach(el => el.classList.add('hidden'));
-    };
-  </script>
+برجاء تأكيد السعر وموعد التسليم`;
+
+  window.open(
+    "https://wa.me/201095983094?text=" + encodeURIComponent(msg),
+    "_blank"
+  );
+}
+</script>
 
 </body>
 </html>
