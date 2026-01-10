@@ -7,106 +7,21 @@
 
 <style>
 *{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:Tahoma;
-  background:#f4f4f4;
-}
-
-header{
-  background:#007bff;
-  color:white;
-  padding:20px;
-  text-align:center;
-}
-
-.filters{
-  text-align:center;
-  padding:15px;
-  background:#e9ecef;
-}
-
-.filters button{
-  margin:5px;
-  padding:10px 15px;
-  border:none;
-  background:#0056b3;
-  color:white;
-  border-radius:6px;
-  cursor:pointer;
-  font-weight:bold;
-}
-
-.products{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:20px;
-  padding:20px;
-}
-
-.product{
-  background:white;
-  width:250px;
-  padding:15px;
-  border-radius:12px;
-  box-shadow:0 0 10px rgba(0,0,0,.1);
-  text-align:center;
-}
-
-.product img{
-  width:100%;
-  border-radius:8px;
-}
-
-.product h3{
-  margin:10px 0;
-}
-
-.product p{
-  margin:5px 0;
-  font-weight:bold;
-}
-
-select{
-  width:100%;
-  padding:8px;
-  margin-top:6px;
-}
-
-.order-btn{
-  margin-top:10px;
-  width:100%;
-  padding:10px;
-  background:#25D366;
-  color:white;
-  border:none;
-  border-radius:6px;
-  font-size:15px;
-  cursor:pointer;
-}
-
-footer{
-  background:#222;
-  color:white;
-  text-align:center;
-  padding:15px;
-}
-
-.whatsapp{
-  position:fixed;
-  bottom:20px;
-  left:20px;
-  background:#25D366;
-  color:white;
-  padding:12px 18px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:bold;
-}
+body{margin:0;font-family:Tahoma;background:#f4f4f4}
+header{background:#007bff;color:white;padding:20px;text-align:center}
+.filters{ text-align:center;padding:15px;background:#e9ecef }
+.filters button{ margin:5px;padding:10px 15px;border:none;background:#0056b3;color:white;border-radius:6px;cursor:pointer;font-weight:bold }
+.products{ display:flex;flex-wrap:wrap;justify-content:center;gap:20px;padding:20px }
+.product{ background:white;width:250px;padding:15px;border-radius:12px;box-shadow:0 0 10px rgba(0,0,0,.1);text-align:center }
+.product img{ width:100%;border-radius:8px }
+.product h3{ margin:10px 0 }
+.product p{ margin:5px 0;font-weight:bold }
+select{ width:100%;padding:8px;margin-top:6px }
+.order-btn{ margin-top:10px;width:100%;padding:10px;background:#25D366;color:white;border:none;border-radius:6px;font-size:15px;cursor:pointer }
+footer{ background:#222;color:white;text-align:center;padding:15px }
+.whatsapp{ position:fixed;bottom:20px;left:20px;background:#25D366;color:white;padding:12px 18px;border-radius:50px;text-decoration:none;font-weight:bold }
 </style>
 </head>
-
 <body>
 
 <header>
@@ -130,38 +45,30 @@ footer{
   <img src="img/tshirt1.jpg">
   <h3>تيشيرت ميلتون</h3>
   <p>الكود: MC-TS-001</p>
-
   <select id="s1">
-    <option>M</option><option>L</option><option>XL</option><option>XXL</option>
+    <option>S</option><option>M</option><option>L</option>
+    <option>XL</option><option>XXL</option><option>XXXL</option>
   </select>
-
   <select id="c1">
     <option>أسود</option><option>أبيض</option><option>كحلي</option>
+    <option>أحمر</option><option>أخضر</option><option>رمادي</option>
   </select>
-
-  <button class="order-btn"
-    onclick="order('MC-TS-001','تيشيرت ميلتون','s1','c1')">
-    اطلب الآن
-  </button>
+  <button class="order-btn" onclick="order('MC-TS-001','تيشيرت ميلتون','s1','c1')">اطلب الآن</button>
 </div>
 
 <div class="product tshirt">
   <img src="img/tshirt2.jpg">
   <h3>تيشيرت ميلتون</h3>
   <p>الكود: MC-TS-002</p>
-
   <select id="s2">
-    <option>M</option><option>L</option><option>XL</option>
+    <option>S</option><option>M</option><option>L</option>
+    <option>XL</option><option>XXL</option><option>XXXL</option>
   </select>
-
   <select id="c2">
-    <option>أسود</option><option>رمادي</option>
+    <option>أسود</option><option>أبيض</option><option>كحلي</option>
+    <option>أحمر</option><option>أخضر</option><option>رمادي</option>
   </select>
-
-  <button class="order-btn"
-    onclick="order('MC-TS-002','تيشيرت ميلتون','s2','c2')">
-    اطلب الآن
-  </button>
+  <button class="order-btn" onclick="order('MC-TS-002','تيشيرت ميلتون','s2','c2')">اطلب الآن</button>
 </div>
 
 <!-- ===== بناطيل ===== -->
@@ -169,38 +76,30 @@ footer{
   <img src="img/pants1.jpg">
   <h3>بنطلون ميلتون</h3>
   <p>الكود: MC-PN-010</p>
-
   <select id="s3">
-    <option>M</option><option>L</option><option>XL</option>
+    <option>S</option><option>M</option><option>L</option>
+    <option>XL</option><option>XXL</option><option>XXXL</option>
   </select>
-
   <select id="c3">
-    <option>أسود</option><option>رمادي</option>
+    <option>أسود</option><option>أبيض</option><option>كحلي</option>
+    <option>أحمر</option><option>أخضر</option><option>رمادي</option>
   </select>
-
-  <button class="order-btn"
-    onclick="order('MC-PN-010','بنطلون ميلتون','s3','c3')">
-    اطلب الآن
-  </button>
+  <button class="order-btn" onclick="order('MC-PN-010','بنطلون ميلتون','s3','c3')">اطلب الآن</button>
 </div>
 
 <div class="product pants">
   <img src="img/pants2.jpg">
   <h3>بنطلون ميلتون</h3>
   <p>الكود: MC-PN-011</p>
-
   <select id="s4">
-    <option>M</option><option>L</option><option>XL</option>
+    <option>S</option><option>M</option><option>L</option>
+    <option>XL</option><option>XXL</option><option>XXXL</option>
   </select>
-
   <select id="c4">
-    <option>أسود</option><option>كحلي</option>
+    <option>أسود</option><option>أبيض</option><option>كحلي</option>
+    <option>أحمر</option><option>أخضر</option><option>رمادي</option>
   </select>
-
-  <button class="order-btn"
-    onclick="order('MC-PN-011','بنطلون ميلتون','s4','c4')">
-    اطلب الآن
-  </button>
+  <button class="order-btn" onclick="order('MC-PN-011','بنطلون ميلتون','s4','c4')">اطلب الآن</button>
 </div>
 
 <!-- ===== أطقم ===== -->
@@ -208,19 +107,15 @@ footer{
   <img src="img/set1.jpg">
   <h3>طقم ميلتون كامل</h3>
   <p>الكود: MC-ST-100</p>
-
   <select id="s5">
-    <option>M</option><option>L</option><option>XL</option>
+    <option>S</option><option>M</option><option>L</option>
+    <option>XL</option><option>XXL</option><option>XXXL</option>
   </select>
-
   <select id="c5">
-    <option>أسود</option><option>كحلي</option>
+    <option>أسود</option><option>أبيض</option><option>كحلي</option>
+    <option>أحمر</option><option>أخضر</option><option>رمادي</option>
   </select>
-
-  <button class="order-btn"
-    onclick="order('MC-ST-100','طقم ميلتون كامل','s5','c5')">
-    اطلب الآن
-  </button>
+  <button class="order-btn" onclick="order('MC-ST-100','طقم ميلتون كامل','s5','c5')">اطلب الآن</button>
 </div>
 
 </section>
@@ -234,20 +129,15 @@ footer{
 <script>
 function filterProducts(type){
   document.querySelectorAll('.product').forEach(p=>{
-    if(type === 'all'){
-      p.style.display = 'block';
-    }else{
-      p.style.display = p.classList.contains(type) ? 'block' : 'none';
-    }
+    if(type==='all'){ p.style.display='block'; }
+    else{ p.style.display = p.classList.contains(type) ? 'block' : 'none'; }
   });
 }
 
-function order(code, type, sizeId, colorId){
-  const size = document.getElementById(sizeId).value;
-  const color = document.getElementById(colorId).value;
-
-  const msg =
-`طلب جديد من Milton Club 👕
+function order(code,type,sizeId,colorId){
+  const size=document.getElementById(sizeId).value;
+  const color=document.getElementById(colorId).value;
+  const msg=`طلب جديد من Milton Club 👕
 --------------------
 الكود: ${code}
 النوع: ${type}
@@ -256,12 +146,10 @@ function order(code, type, sizeId, colorId){
 
 برجاء تأكيد السعر وموعد التسليم`;
 
-  window.open(
-    "https://wa.me/201095983094?text=" + encodeURIComponent(msg),
-    "_blank"
-  );
+  window.open("https://wa.me/201095983094?text="+encodeURIComponent(msg),"_blank");
 }
 </script>
 
 </body>
 </html>
+
