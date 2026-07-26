@@ -175,8 +175,9 @@ function filterProducts(type){
     else if(p.classList.contains(type)){ p.style.display='block'; }
     else{ p.style.display='none'; }
   });
- {
-  function order(code, type, sizeId, colorId) 
+}
+
+function order(code, type, sizeId, colorId){
   const size = document.getElementById(sizeId).value;
   const color = document.getElementById(colorId).value;
   
