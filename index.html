@@ -167,33 +167,43 @@ footer{ background:#222;color:white;text-align:center;padding:18px;margin-top:30
 
 <a class="whatsapp" href="https://wa.me/201145587547" target="_blank">💬 واتساب</a>
 
+
 <script>
-function filterProducts(type){
-  const products = document.querySelectorAll('.product');
-  products.forEach(p=>{
-    if(type==='all'){ p.style.display='block'; }
-    else if(p.classList.contains(type)){ p.style.display='block'; }
-    else{ p.style.display='none'; }
-  });
-function order(code, type, sizeId, colorId) {
+function filterProducts(type) {
+    const products = document.querySelectorAll('.product');
+
+    products.forEach(function(p) {
+        if (type === 'all' || p.classList.contains(type)) {
+            p.style.display = 'block';
+        } else {
+            p.style.display = 'none';
+        }
+    });
+}
+
+function order(code, product, sizeId, colorId) {
+
     const size = document.getElementById(sizeId).value;
     const color = document.getElementById(colorId).value;
 
     const msg =
-`🛍️ *طلب جديد - قطوف* 🛍️
+`🛍️ *طلب جديد - قطوف*
 
-👕 *المنتج:* ${type}
+👕 *المنتج:* ${product}
 🆔 *الكود:* ${code}
 📏 *المقاس:* ${size}
 🎨 *اللون:* ${color}
 
 📞 برجاء تأكيد السعر وموعد التسليم.
-شكراً لكم ❤️`;
 
-    const url = "https://wa.me/201145587547?text=" + encodeURIComponent(msg);
-    window.open(url, "_blank");
+❤️ شكراً لكم`;
+
+    const whatsapp =
+        "https://wa.me/201145587547?text=" +
+        encodeURIComponent(msg);
+
+    window.open(whatsapp, "_blank");
 }
 </script>
-
 </body>
 </html>
